@@ -8,9 +8,6 @@ body {
   font-family: Oxygen, sans-serif;
   color: white;
 }
-h4 {
-  border: 1px solid yellow;
-}
 .section-padding {
   width: 80%;
   margin: 0 auto;
@@ -84,32 +81,42 @@ nav ul.top-bar__menu {
 .main-content {
   height: 80vh;
   margin: 0 auto;
+  position: relative;
 }
 .sidebar-content {
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80vh;
 }
 .main-content {
-  width: 75%;
-  border: 1px solid green;
+  width: 100%;
   padding: 10px;
+  overflow: hidden;
 }
 .side-bar__social-media-links {
   width: 100%;
-  min-height: 300px;
+  min-height: 90%;
   background-color: rgb(26, 32, 32);
   border-radius: 10px;
   padding-bottom: 10px;
+  margin: 0 auto;
+  position: relative;
 }
 .side-bar__social-media-links h4 {
   text-align: center;
 }
+.side-bar__timeline-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
 
 .side-bar__timeline-date li {
   list-style-type: none;
-  width: 130px;
+  width: 80%;
   margin-top: 10px;
   position: relative;
   background-color: rgba(51, 51, 51, 0.8);
@@ -133,6 +140,52 @@ nav ul.top-bar__menu {
 footer {
   border: 1px solid red;
 }
+.side-bar__timeline-social-container {
+  bottom: 20px;
+  position: absolute;
+  width: 100%;
+}
 .side-bar__timeline-social-media {
-  border: 1px solid yellowgreen;
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  bottom: -10px;
+}
+.main-content::after {
+  /* using style CSS custom property */
+  font: var(--fa-font-solid);
+  content: '\f121';
+  font-size: 60px;
+  color: rgb(24, 23, 23);
+  bottom: 50px;
+  right: 130px;
+  position: absolute;
+  z-index: -2;
+}
+.main-content::before {
+  /* using style CSS custom property */
+  font: var(--fa-font-solid);
+  content: '\f126';
+  font-size: 200px;
+  transform: rotate(20deg);
+  color: rgb(24, 23, 23);
+  bottom: 10px;
+  left: 40px;
+  position: absolute;
+  z-index: -1;
+}
+.main-content__overlap {
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
