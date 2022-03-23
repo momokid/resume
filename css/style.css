@@ -97,7 +97,7 @@ nav ul.top-bar__menu {
 }
 .side-bar__social-media-links {
   width: 100%;
-  min-height: 90%;
+  height: 90%;
   background-color: rgb(26, 32, 32);
   border-radius: 10px;
   padding-bottom: 10px;
@@ -127,8 +127,10 @@ nav ul.top-bar__menu {
   top: 10px;
   height: 17px;
   position: absolute;
-  border: 1px solid orange;
+  background-color: orange;
   left: -1px;
+  width: 5px;
+  border-radius: 5px;
 }
 .side-bar__timeline-date li a {
   text-decoration: none;
