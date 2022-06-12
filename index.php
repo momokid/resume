@@ -16,42 +16,10 @@
   </head>
   <body>
     <div class="container">
-      <div class="top-bar">
-        <div class="top-bar__container section-padding">
-          <div class="min-contacts">
-            <span>
-              <i class="fa-solid fa-mobile-screen text-orange"></i>
-              <i class="fa-duotone fa-bracket-round text-white">
-                (233)-577915555
-              </i>
-            </span>
-          </div>
-          <div class="header">
-            <header>
-              <span class="dev-id text-orange">TheAnwar</span>
-              <nav>
-                <ul class="top-bar__menu">
-                  <li>
-                    <a href="#">About Me</a>
-                  </li>
-                  <li>
-                    <a href="#">My Works</a>
-                  </li>
-                  <li>
-                    <a href="#">Blog</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact</a>
-                  </li>
-                </ul>
-              </nav>
-            </header>
-          </div>
-        </div>
-      </div>
+      <?php include_once "./components/top_menu.php"; ?>
 
       <section class="section-main section-padding">
-        <div class="sidebar-content">
+        <!-- <div class="sidebar-content">
           <div class="side-bar__social-media-links">
             <div class="side-bar__timeline-container">
               <h4>Timeline</h4>
@@ -71,12 +39,19 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>-->
         <div class="main-content">
-          <div class="main-content__overlap"></div>
+          <div class="main-content__overlaps dev_details">
+            <h2>
+              I am
+              <e class="text-orange">Anwar</e>
+              Sadat Ayub
+            </h2>
+            <h5>Develop. Teach. Social.</h5>
+          </div>
         </div>
       </section>
-      <footer>Footer</footer>
+      <!--<footer>Footer</footer>-->
     </div>
   </body>
 </html>
